@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Hitungan Tabungan</string>
+    <string name="textAplikasi">Masukan uang yang ingin ditabung dan masukan jumlah target yang diinginkan dan lihat berapa hari kamu dapat menabung untuk mencapai jumlah tabungan yang ditargetkan</string>
+    <string name="page_title">Hitungan Tabungan</string>
+    <string name="jumlah_uang_yang_ditabungkan">Jumlah Uang Yang Ditabungkan</string>
+    <string name="uangtarget">Uang Yang Ditargetkan</string>
+    <string name="reset">Reset</string>
+    <string name="hitung">HITUNG</string>
+    <string name="hasil">Hasil : %1$s Hari</string>
+    <string name="invalid_input">Input Tidak Boleh Kosong</string>
+    <string name="invalid_nabung">Uang Anda Sudah Mencapai Target Tabungan</string>
+</resources>
