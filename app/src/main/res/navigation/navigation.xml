@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/hitungHasilFragment">
+
+    <fragment
+        android:id="@+id/hitungHasilFragment"
+        android:name="org.d3if4094.hitungantabungan.ui.hitung.HitungHasilFragment"
+        android:label="@string/page_hitung"
+        tools:layout="@layout/fragment_hitung" >
+        <action
+            android:id="@+id/action_hitungHasilFragment_to_historiFragment"
+            app:destination="@id/historiFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/historiFragment"
+        android:name="org.d3if4094.hitungantabungan.ui.histori.HistoriFragment"
+        android:label="@string/page_history"
+        tools:layout="@layout/fragment_histori" />
+</navigation>
