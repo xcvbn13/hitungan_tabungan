@@ -12,8 +12,6 @@ interface HistoriDao  {
     fun getHistori(): LiveData<List<HistoriEntity>>
 
     @Delete
-    fun delete(vararg historiEntity: HistoriEntity)
+    fun delete(historiEntity: HistoriEntity)
 
-    @Update
-    fun updateUsers(vararg historiEntity: HistoriEntity)
 }

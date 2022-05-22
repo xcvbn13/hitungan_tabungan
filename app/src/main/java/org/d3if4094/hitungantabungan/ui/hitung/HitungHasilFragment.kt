@@ -24,6 +24,7 @@ class HitungHasilFragment : Fragment() {
 
         ViewModelProvider(this,factory)[HitungViewModel::class.java]
     }
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -37,12 +38,15 @@ class HitungHasilFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         binding.hasilButton.setOnClickListener { hasilUang() }
         binding.resetButton.setOnClickListener { reset() }
+        binding.buttonAbout.setOnClickListener {
+            findNavController().navigate(R.id.action_hitungHasilFragment_to_aboutFragment)
+        }
 
         viewModel.getHasilHitung().observe(requireActivity()) { showResult(it) }
     }
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         super.onCreateOptionsMenu(menu, inflater)
-        inflater.inflate(R.menu.menu, menu)
+        inflater.inflate(R.menu.options_menu, menu)
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
