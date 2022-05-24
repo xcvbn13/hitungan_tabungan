@@ -87,6 +87,7 @@ class HitungHasilFragment : Fragment() {
             if(jumlahUang.toInt() >= targetUang.toInt()){
                 Toast.makeText(context, R.string.invalid_nabung, Toast.LENGTH_LONG).show()
                 binding.textViewHasil.text= ""
+                binding.buttonShare.visibility = View.INVISIBLE
                 return
             }else {
                 viewModel.hitungTabungan(targetUang.toDouble(),jumlahUang.toDouble())
