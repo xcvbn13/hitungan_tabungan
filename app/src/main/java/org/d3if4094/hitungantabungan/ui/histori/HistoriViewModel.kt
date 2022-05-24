@@ -16,4 +16,9 @@ class HistoriViewModel(private val db:HistoriDao): ViewModel() {
             db.delete(historiEntity)
         }
     }
+    fun deleteAllHistory() = viewModelScope.launch {
+        withContext(Dispatchers.IO){
+            db.deleteAllHistory()
+        }
+    }
 }

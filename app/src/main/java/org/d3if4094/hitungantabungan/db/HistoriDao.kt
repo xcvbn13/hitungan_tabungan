@@ -14,4 +14,7 @@ interface HistoriDao  {
     @Delete
     fun delete(historiEntity: HistoriEntity)
 
+    @Query("DELETE FROM histori")
+    fun deleteAllHistory()
+
 }

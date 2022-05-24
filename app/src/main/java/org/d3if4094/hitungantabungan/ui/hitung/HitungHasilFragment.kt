@@ -1,7 +1,9 @@
 package org.d3if4094.hitungantabungan.ui.hitung
 
+import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.text.TextUtils
 import android.view.*
@@ -38,12 +40,29 @@ class HitungHasilFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         binding.hasilButton.setOnClickListener { hasilUang() }
         binding.resetButton.setOnClickListener { reset() }
+        binding.buttonShare.setOnClickListener {
+            shareData()
+        }
         binding.buttonAbout.setOnClickListener {
             findNavController().navigate(R.id.action_hitungHasilFragment_to_aboutFragment)
         }
 
         viewModel.getHasilHitung().observe(requireActivity()) { showResult(it) }
     }
+
+    @SuppressLint("QueryPermissionsNeeded")
+    private fun shareData() {
+
+        val message = getString(R.string.bagikan_template,binding.outlinedTextFieldJumlahUangInput.text,
+            binding.outlinedTextFieldTargetUangInput.text,binding.textViewHasil.text)
+
+        val shareIntent = Intent(Intent.ACTION_SEND)
+        shareIntent.setType("text/plain").putExtra(Intent.EXTRA_TEXT, message)
+        if (shareIntent.resolveActivity(requireActivity().packageManager) != null) {
+            startActivity(shareIntent)
+        }
+    }
+
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         super.onCreateOptionsMenu(menu, inflater)
         inflater.inflate(R.menu.options_menu, menu)
@@ -83,12 +102,14 @@ class HitungHasilFragment : Fragment() {
     private fun showResult(result:HasilHitung?){
         if (result == null) return
         binding.textViewHasil.text = getString(R.string.hasil, result.hasil)
+        binding.buttonShare.visibility = View.VISIBLE
     }
 
     private fun reset(){
         binding.outlinedTextFieldJumlahUangInput.setText("")
         binding.outlinedTextFieldTargetUangInput.setText("")
         binding.textViewHasil.text= ""
+        binding.buttonShare.visibility = View.INVISIBLE
     }
 
     private fun Activity.hideKeyboard() {

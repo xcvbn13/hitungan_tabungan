@@ -24,7 +24,12 @@
     <string name="tabungan_per_hari_label">Tabungan/hari</string>
     <string name="target_label">Target</string>
     <string name="prediksi_hari_label">Prediksi Hari</string>
-    <string name="konfirmasi_hapus">Konfirmasi Hapus</string>
+    <string name="konfirmasi_hapus">Apakah Anda Yakin Ingin Menghapus Semuanya?</string>
     <string name="hapus">Hapus</string>
     <string name="batal">Batal</string>
+    <string name="hapus_histori_all">Hapus Semua Histori</string>
+    <string name="share">Bagikan</string>
+    <string name="bagikan_template">Uang yang ditabung : Rp. %1$s\nJumlah yang ditargetkan : Rp. %2$s\n%3$s</string>
+    <string name="konfirmasi_hapus_item">Apakah Anda Yakin Ingin Menghapus History Ini?</string>
+
 </resources>
