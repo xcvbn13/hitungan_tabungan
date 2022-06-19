@@ -119,9 +119,23 @@
             tools:visibility="visible"/>
 
         <Button
+            android:id="@+id/pengingatButton"
+            android:text="@string/pengingatButton"
+            app:layout_constraintTop_toBottomOf="@+id/buttonShare"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="12dp"
+            android:textStyle="bold"
+            android:textSize="12sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            tools:visibility="visible"/>
+
+        <Button
             android:id="@+id/buttonAbout"
             android:text="@string/about_application"
-            app:layout_constraintTop_toBottomOf="@+id/buttonShare"
+            app:layout_constraintTop_toBottomOf="@+id/pengingatButton"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginTop="12dp"

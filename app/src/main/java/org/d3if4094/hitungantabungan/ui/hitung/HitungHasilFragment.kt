@@ -43,6 +43,10 @@ class HitungHasilFragment : Fragment() {
         binding.buttonShare.setOnClickListener {
             shareData()
         }
+        binding.pengingatButton.setOnClickListener {
+            Toast.makeText(context, R.string.pengingat_toast, Toast.LENGTH_LONG).show()
+            viewModel.scheduleUpdater(requireActivity().application)
+        }
         binding.buttonAbout.setOnClickListener {
             findNavController().navigate(R.id.action_hitungHasilFragment_to_aboutFragment)
         }
@@ -102,8 +106,9 @@ class HitungHasilFragment : Fragment() {
 
     private fun showResult(result:HasilHitung?){
         if (result == null) return
-        binding.textViewHasil.text = getString(R.string.hasil, result.hasil)
+        binding.textViewHasil.text = getString(R.string.hasil, result.hasil.toString())
         binding.buttonShare.visibility = View.VISIBLE
+        binding.pengingatButton.visibility = View.VISIBLE
     }
 
     private fun reset(){
@@ -111,6 +116,7 @@ class HitungHasilFragment : Fragment() {
         binding.outlinedTextFieldTargetUangInput.setText("")
         binding.textViewHasil.text= ""
         binding.buttonShare.visibility = View.INVISIBLE
+        binding.pengingatButton.visibility = View.INVISIBLE
     }
 
     private fun Activity.hideKeyboard() {

@@ -13,7 +13,7 @@
     <string name="content_description_favorite">Content Description History</string>
     <string name="page_history">History</string>
     <string name="page_hitung">Hitungan Tabungan</string>
-    <string name="textFragmentAbout">Hitungan Tabungan adalah aplikasi android untuk menghitung berapa hari untuk menabung hingga tercapai target uang yang ditentukan.\n\nTemukan kodenya di \nhttps://github.com/xcvbn13/hitungan_tabungan.git\n\nCopyright © 2022 Imam Y R.\nAll rights reserved.</string>
+    <string name="textFragmentAbout">%1$s</string>
     <string name="about_application">Tentang Aplikasi</string>
     <string name="tentang_aplikasi">Tentang Aplikasi</string>
     <string name="titik_dua">:</string>
@@ -32,4 +32,12 @@
     <string name="bagikan_template">Uang yang ditabung : Rp. %1$s\nJumlah yang ditargetkan : Rp. %2$s\n%3$s</string>
     <string name="konfirmasi_hapus_item">Apakah Anda Yakin Ingin Menghapus History Ini?</string>
 
+<!--    work bg -->
+    <string name="channel_name">Pengingat</string>
+    <string name="channel_desc">Pengingat Tabungan</string>
+    <string name="notif_title">Periksa Tabungan Anda!</string>
+    <string name="notif_text">Tabungan Anda Sudah Mencapai Target..</string>
+    <string name="pengingatButton">Tambah Pengingat</string>
+    <string name="pengingat_toast">Pengingat DItambahkan</string>
+    <string name="koneksi_error">Koneksi Error</string>
 </resources>

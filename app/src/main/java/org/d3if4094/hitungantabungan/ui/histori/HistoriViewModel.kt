@@ -21,4 +21,6 @@ class HistoriViewModel(private val db:HistoriDao): ViewModel() {
             db.deleteAllHistory()
         }
     }
+
+
 }
