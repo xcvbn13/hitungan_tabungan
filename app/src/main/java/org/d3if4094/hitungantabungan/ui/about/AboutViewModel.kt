@@ -15,7 +15,6 @@ import com.bumptech.glide.request.RequestListener
 import com.bumptech.glide.request.target.Target
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import org.d3if4094.hitungantabungan.R
 import org.d3if4094.hitungantabungan.model.TentangAplikasi
 import org.d3if4094.hitungantabungan.network.Api
 import org.d3if4094.hitungantabungan.network.ApiStatus

@@ -8,11 +8,8 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import org.d3if4094.hitungantabungan.R
 import org.d3if4094.hitungantabungan.databinding.FragmentAboutBinding
-import org.d3if4094.hitungantabungan.db.HistoriDb
 import org.d3if4094.hitungantabungan.model.TentangAplikasi
 import org.d3if4094.hitungantabungan.network.ApiStatus
-import org.d3if4094.hitungantabungan.ui.histori.HistoriViewModel
-import org.d3if4094.hitungantabungan.ui.histori.HistoriViewModelFactory
 
 class AboutFragment : Fragment(){
     private val viewModel: AboutViewModel by lazy {
